@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+	<title>kohrVidae</title>
+	<meta charset = "utf-8" />
+	<meta http-equiv = "Content-type" content = "text/html; charset = utf-8" />
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1" />
+
+
+<link rel = "stylesheet" type = "text/css"  href="media/base.css"></style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+</head>
+<body>
+
+	<div id = "wrapper">
+		
+		
+		<figure class="star">
+		<figure class="star-top"></figure>
+
+		<figure class="star-bottom"></figure>
+		</figure>
+		
+		<H2>Test</H2>
+		
+		<div id = "#topnav">
+		<li><a href = "https://twitter.com/kohrVidae">Twitter</a></li>
+		</div>
+		
+		<div id = "navcol">
+		
+			<ul>
+				<li>About</li>
+				<li>Clients</li>
+				<li></li>
+			</ul>
+		
+		</div>
+		
+
+	
+	</div>
+	
+	
+
+	
+
+
+
+
+
+
+<script type = "text/javascript">
+	var limit=90; // Max number of stars
+	body=document.body;
+		
+
+	
+
+	
+	loop={
+
+
+		getColour:function(){
+            var letters = '0123456789ABCDEF'.split('');
+			var lettersUpper = '89ABCDEF'.split('');
+			var lettersLower = '012345678'.split('');
+            var colour = '#';
+            for (var i = 0; i<1; i++) {
+                colour += letters[Math.round(Math.random() * 15)] + letters[Math.round(Math.random() * 7)] + lettersLower[Math.round(Math.random() * 7)] + lettersUpper[Math.round(Math.random() * 7)] + lettersUpper[Math.round(Math.random() * 7)] + lettersUpper[Math.round(Math.random() * 7)];
+            }
+            return colour;		
+		},
+
+		
+		//initilising
+		start:function(){
+			for (var i=0; i <= limit; i++) {
+				var star=this.newStar();
+				star.style.top=this.rand()*100+"%";
+				star.style.left=this.rand()*100+"%";
+				star.style.webkitAnimationDelay=this.rand()+"s";
+				star.style.mozAnimationDelay=this.rand()+"s";
+				star.style.backgroundColor = this.getColour();
+				body.appendChild(star);
+			};
+		},
+		
+		//to get random number
+		rand:function(){
+			return Math.random();
+		},
+
+		
+		//creating html dom for star
+		newStar:function(){
+			var d = document.createElement('div');
+			d.innerHTML = '<figure class="star"><figure class="star-top"></figure><figure class="star-bottom"></figure></figure>';
+			return d.firstChild;
+		},
+
+
+		//
+	};
+	loop.start();
+	
+	
+	
+
+
+</script>
+
+
+</body>
+</html>	
