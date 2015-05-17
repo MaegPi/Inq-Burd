@@ -1,43 +1,22 @@
 body{
 	background-color: #070715;
-	@font-face {
-			font-family: "Riesling";
-			src: url("Riesling/riesling.ttf") format('truetype');
-			
-	}
+	background: url("images/magpie.png") no-repeat;
+	background-position: 40% 40%;
 	
-
-
 	
 }
 
-body,h2,h3,h4,h5,h6{
-	font-family: "Riesling";
-	color: #334269;
-
+#wrapper{
+	background: url("images/magpie.png") no-repeat;
+	background-position: 40% 40%;
+	z-index: 999998;
 }
 
+body,h1,h2,h3,h4,h5,h6{
+	font-family: courier new;
+	color: #444;
 
-
-.socialButtons a img:hover{
-	height: 105%;
-	width: 105%;
-	background-color: white;
-	border-radius: 47px;	
-	padding: 0;
-	
 }
-
-.socialButtons a img:active{
-	height: 105%;
-	width: 105%;
-	background-color: white;
-	border-radius: 47px;	
-	padding: 0;
-	
-}
-
-
 
 /*simple reset*/
 * {
@@ -65,7 +44,7 @@ h2 a{
  color: #fff;
 }
 .star {
- 
+ /*display: block;*/
 	position: absolute;
 	top: 70%;
 	left: 70%;
@@ -74,7 +53,7 @@ h2 a{
 	background: #F6F6F6;
 	overflow: hidden;
 	border-radius: 10px;
-	z-index: 1;
+	z-index: 2;
 	
 	animation: glitter 1.5s linear 0s infinite normal;
 	-webkit-animation: glitter 1.5s linear 0s infinite normal;
@@ -88,7 +67,7 @@ h2 a{
 
 .star-top,.star-bottom{
 	position: relative;
-
+	/*display: block;*/
 }
 .star-top:before , 
 .star-top:after ,
@@ -97,9 +76,9 @@ h2 a{
 	content: "";
 	width: 10px;
 	height: 10px;
-	border-radius: 10px;
+	border-radius: 1px;
 	position: absolute;
-}
+	}
 
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
