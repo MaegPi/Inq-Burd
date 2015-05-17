@@ -14,7 +14,7 @@
 
 .wrapper{
 	width: 100%;
-	/*height: 30px;*/
+	height: 100%;
 	margin: 0 auto;
 	/*z-index: 4;*/
   
@@ -22,12 +22,12 @@
 
 #navtop{
 	float: left;
-	margin: 0;
+	margin-top: 2px;
 	padding-top: 0px;
 	position: relative;
 	padding: 0;
 	height: 70px;
-           
+
        
 }
 
@@ -38,12 +38,15 @@
 	postion: relative;
 	list-style-type: none;
 
-	letter-spacing: -1px;
+	letter-spacing: 3px;
 	line-height: 18px;
 	font-weight: bold;
-	font-size: 0.8em;
+	font-size: 2.4em;
 	height: 100%;
-	
+}
+
+.nav-text{
+	padding: 10px;
 }
 
 #nav-button{
@@ -74,11 +77,12 @@
 
 iframe{
 	float: left;
-	height: 40%;
-	width: 25%;
+	height: 400px;
+	width: 300px;
 	position: absolute;
-	top: 10%;
+	top: 50px;
 	left: 11%;
+	margin-top: 5%;
 	border-radius: 20px;
 	border: 10px double #070715;
 	background-color: rgba(255, 255, 255, 0.7);
